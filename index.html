@@ -1,25 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
     <title>TenQuest</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light background">
+      <a class="navbar-brand nav-item nav-link" href="#">10 Questions</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" href="#">View Responses</a>
+          <a class="nav-item nav-link" href="#">Logout</a>
+        </div>
+      </div>
+    </nav>
 
+    <div class="container d-flex flex-column justify-content-center">
+      <div class="row">
+        <div class="col">
+          <form>
+            <div class="form-group">
+              <ol>
+                <li>
+                  <label for="question1">What are 3 of your favorite movies?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="favoritemovies"
+                  />
+                </li>
+                <li>
+                  <label for="question2">Are you a morning person or a night owl?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="morningperson"
+                  />
+                </li>
+                <li>
+                  <label for="question3">Name a person you'd like to have dinner with and why?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="datenight"
+                  />
+                </li>
+                <li>
+                  <label for="favoritebar">What is your favorite bar in Phx?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="favoritebar"
+          
+                  />
+                </li>
+                <li>
+                  <label for="besttacos">Name of the best taco place in the city?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="besttacos"
+                    
+                  />
+                </li>
+                <li>
+                  <label for="roadtrip">What is your favorite road trip destination?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="roadtrip"
+                   
 
+                  />
+                </li>
+                <li>
+                  <label for="flyanywhere">If you could fly anywhere, where would go?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="flyanywhere"
+                 
+                  />
+                </li>
+                <li>
+                  <label for="memeformat">What's your favorite meme format?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="memeformat"
+                  
+                  />
+                </li>
+                <li>
+                  <label for="timeperiod">What is your faovrite time period in history?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="timeperiod"
+                 
+                  />
+                </li>
+                <li>
+                  <label for="onemeal">What is one meal you know how to cook?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="onemeal"
+                  
+                  />
+                </li>
+              </ol>
+            </div>
+          </form>
+        </div>
+      </div>
 
+      <div class="row save">
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </div>
 
-
-
-
-
-</head>
-<body>
-    
-
-
-
-
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
