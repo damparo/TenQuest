@@ -12,7 +12,13 @@ app.use(express.json());
 
 // routes
 app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "questions.html"));
+});
+app.get("/questions", function(req, res){
+    res.sendFile(path.join(__dirname, "questions.html"));
+});
+app.get("/responses", function(req, res){
+    res.sendFile(path.join(__dirname, "responses.html"));
 });
 // app.post("/", function(req, res){
 //     res.send("welcome!");
