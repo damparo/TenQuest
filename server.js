@@ -1,23 +1,23 @@
+// Dependencies
 const express = require("express");
+const path = require("path")
+
+// Setting up Express app
 const app = express();
 const PORT = 8080
 
 // middleware
-
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // routes
 app.get("/", function(req, res){
-    res.send("welcome!");
+    res.sendFile(path.join(__dirname, "index.html"));
 });
-app.post("/", function(req, res){
-    res.send("welcome!");
-});
-app.put("/", function(req, res){
-    res.send("welcome!");
-});
-app.delete("/", function(req, res){
-    res.send("welcome!");
-});
+// app.post("/", function(req, res){
+//     res.send("welcome!");
+// });
+
 
 
 // only use this route at the bottom of the route list; it catches everything after forward slash and returns 404
