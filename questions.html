@@ -12,11 +12,30 @@
     />
 
     <link rel="stylesheet" href="./styles.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
     <title>TenQuest</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light background">
-      <a class="navbar-brand nav-item nav-link" href="/questions">10 Questions</a>
+      <a class="navbar-brand nav-item nav-link" href="/questions"
+        >10 Questions</a
+      >
       <button
         class="navbar-toggler"
         type="button"
@@ -68,7 +87,7 @@
                   >
                   <input type="text" class="form-control" id="question4" />
                 </li>
-                <li>
+                <!-- <li>
                   <label for="besttacos"
                     >Name of the best taco place in the city?</label
                   >
@@ -103,7 +122,7 @@
                     >What is one meal you know how to cook?</label
                   >
                   <input type="text" class="form-control" id="question10" />
-                </li>
+                </li> -->
               </ol>
             </div>
           </form>
@@ -112,15 +131,47 @@
 
       <div class="row save">
         <div class="col">
-
           <div id="msg"></div>
           <button type="submit" class="btn btn-primary" id="save">Save</button>
-
         </div>
       </div>
     </div>
 
-    <script
+    <script type="text/javascript">
+      function displayMessage(type, message) {
+        $("#msg").text(message);
+        $("#msg").attr("class", type);
+      }
+
+      $("#save").on("click", function (event) {
+        event.preventDefault();
+
+        var user = {
+          questOne: $("#question1").val().trim(),
+          questTwo: $("#question2").val().trim(),
+          questThree: $("#question3").val().trim(),
+          questFour: $("#question4").val().trim(),
+        };
+
+        console.log(user);
+
+        if (user.questOne === "") {
+          displayMessage("error", "question cannot be blank");
+        } else if (user.questTwo === "") {
+          displayMessage("error", "question cannot be blank");
+        } else if (user.questThree === "") {
+          displayMessage("error", "question cannot be blank");
+        } else if (user.questFour === "") {
+          displayMessage("error", "question cannot be blank");
+        } else {
+          displayMessage("success", "Registered successfully");
+        }
+
+        localStorage.setItem("user", JSON.stringify(user));
+      });
+    </script>
+
+    <!-- <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"
@@ -135,6 +186,6 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
-    <script src="./index.js"></script>
+  <script src="./index.js"></script> -->
   </body>
 </html>

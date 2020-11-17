@@ -11,9 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // routes
+// this route will become the log in route once its built
 app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "questions.html"));
 });
+
 app.get("/questions", function(req, res){
     res.sendFile(path.join(__dirname, "questions.html"));
 });
