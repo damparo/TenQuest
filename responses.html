@@ -66,10 +66,10 @@ $("#generate").on("click", function(){
   $.get("/api/answers", function(data) {
         console.log(data);
         if (data) {
-          $("#answer1").text(data[1].questOne);
-          $("#answer2").text(data[1].questTwo);
-          $("#answer3").text(data[1].questThree);
-          $("#answer4").text(data[1].questFour);
+          $("#answer1").text(data[0].questOne);
+          $("#answer2").text(data[0].questTwo);
+          $("#answer3").text(data[0].questThree);
+          $("#answer4").text(data[0].questFour);
          
         } 
         

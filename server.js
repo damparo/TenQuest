@@ -14,13 +14,13 @@ app.use(express.json());
 // data
 
 const user = [
-    {
-        questOne: "sample",
-        questTwo: "sample",
-        questThree: "sample",
-        questFour: "sample"
+    // {
+    //     questOne: "sample",
+    //     questTwo: "sample",
+    //     questThree: "sample",
+    //     questFour: "sample"
 
-    }
+    // }
 ];
 
 // routes
@@ -45,11 +45,27 @@ app.post("/api/answers", function(req, res){
 
     const newUser = req.body;
 
-    user.push(newUser);
+    user.splice(0, 4, newUser);
 
 
     res.json(newUser);
-});
+
+}
+// app.put("/api/answers", function(req, res){
+
+//     const newUser = req.body;
+
+//     // user.push(newUser);
+//     newUser = user
+
+//     res.json(newUser);
+
+// }
+
+
+
+
+);
 
 
 
