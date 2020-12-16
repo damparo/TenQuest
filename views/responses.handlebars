@@ -1,0 +1,47 @@
+<div class="container d-flex flex-column justify-content-center">
+
+    <div class="card">
+        <ul>
+  {{#each answers}}
+  	<li>
+  	   {{!-- <p>ID: {{this.id}}</p> --}}
+       <p>Wish: {{this.answers}}</p>
+  	</li>
+  {{/each}}
+</ul>
+
+{{!--         
+        <p><strong>A2:</strong> <span id="answer2"></span></p>
+        <p><strong>A3:</strong> <span id="answer3"></span></p>
+        <p><strong>A4:</strong> <span id="answer4"></span></p> --}}
+
+    </div>
+
+
+</div>
+{{!-- <script type="text/javascript">
+
+    $("#generate").on("click", function () {
+
+        $.get("/api/answers", function (data) {
+            console.log(data);
+            if (data) {
+                $("#answer1").text(data[0].questOne);
+                $("#answer2").text(data[0].questTwo);
+                $("#answer3").text(data[0].questThree);
+                $("#answer4").text(data[0].questFour);
+
+            }
+
+        });
+
+
+
+
+    });
+
+
+
+
+
+</script> --}}
